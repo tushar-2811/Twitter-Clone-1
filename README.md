@@ -18,7 +18,7 @@ Express -> Express.js, the minimalist and flexible Node.js web application frame
 PrismORM -> Prisma, the sleek and powerful open-source database toolkit for Node.js and TypeScript! It simplifies database access and management by providing a type-safe and auto-generated query builder.
 
 
-Postgresql -> Ah, PostgreSQL, the open-source relational database management system! Known for its extensibility and compliance with SQL standards.
+MongoDB -> Ah, Mongodb, the NoSQL database.
 
 
 Zod -> Zod, the TypeScript-first schema declaration and validation library! It helps you define and validate data structures with ease, ensuring type safety and consistency in your TypeScript projects.
