@@ -2,7 +2,7 @@ import React from 'react';
 import SideBar from './SideBar';
 import FollowBar from './FollowBar';
 import {Outlet} from 'react-router-dom'
-import Modal from '../UI/modal/Modal';
+
 
 // interface LayoutProps {
 //     children : React.ReactNode
