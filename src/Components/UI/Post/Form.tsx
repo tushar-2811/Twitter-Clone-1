@@ -25,7 +25,7 @@ const Form = () => {
     const handleUploadPost = async() => {
       try {
         setIsLoading(true);
-          const {data} = await axios.post(`http://127.0.0.1:8000/api/v1/post/${(Cookies.get("userId"))}/create-post` , {body});
+          const {data} = await axios.post(`https://server-sigma-one.vercel.app/api/v1/post/${(Cookies.get("userId"))}/create-post` , {body});
           setIsLoading(false);
           setBody("");
           // setPostList([...data.p]

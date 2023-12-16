@@ -16,7 +16,7 @@ const Profile = () => {
 
     useEffect(() => {
         const fetchData = async() => {
-            const {data} = await axios.get(`http://127.0.0.1:8000/api/v1/user/${userId}/single-user`);
+            const {data} = await axios.get(`https://server-sigma-one.vercel.app/api/v1/user/${userId}/single-user`);
             setUser({...data.user});
             setFollowers(data.followers);
             setisLoading(false);

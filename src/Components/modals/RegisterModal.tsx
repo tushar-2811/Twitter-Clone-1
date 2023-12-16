@@ -36,7 +36,7 @@ const RegisterModal = () => {
      
        setIsLoading(true);
       // submit the form and login
-      const {data} = await axios.post("http://127.0.0.1:8000/api/v1/auth/register" , {
+      const {data} = await axios.post("https://server-sigma-one.vercel.app/api/v1/auth/register" , {
         name , username , email ,password
       })
 

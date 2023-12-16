@@ -12,7 +12,7 @@ const FollowBar = () => {
 
     useEffect(() => {
         const fetchData = async() => {
-          const {data} = await axios.get("http://127.0.0.1:8000/api/v1/user/get-10");
+          const {data} = await axios.get("https://server-sigma-one.vercel.app/api/v1/user/get-10");
           setUsers(data.users);
           setisLoading(false);
         }

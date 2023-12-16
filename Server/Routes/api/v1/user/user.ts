@@ -7,7 +7,7 @@ const userRouter = Router();
 userRouter.get('/get-10' , getAllUsersController);
 
 // To update particular User
-userRouter.post('/:id/update-user' , updateUserController);
+userRouter.post('/:id/update-user' , isAuthenticated ,updateUserController);
 
 // To fetch single User
 userRouter.get('/:id/single-user',getSingleUserController);
@@ -19,7 +19,7 @@ userRouter.get("/:userId/:postId/check" , isLikedController);
 
 
 // update like
-userRouter.post("/:userId/:postId/:status" , updateLikeController); 
+userRouter.post("/:userId/:postId/:status" , isAuthenticated ,updateLikeController); 
 
 
 

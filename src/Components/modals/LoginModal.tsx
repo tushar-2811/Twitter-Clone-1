@@ -8,7 +8,7 @@ import toast from 'react-hot-toast'
 import axios from 'axios'
 import Cookies from 'js-cookie'
 import { useNavigate } from "react-router-dom";
-import { isAuthenticatedState } from "../../Store/Atoms/authState";
+
 import { authSelector } from "../../Store/Selectors/authSelector";
 
 
@@ -40,7 +40,7 @@ const LoginModal = () => {
         try {
           setIsLoading(true);
           // submit the form and login
-          const {data} = await axios.post("http://127.0.0.1:8000/api/v1/auth/login" , {username , password});
+          const {data} = await axios.post("https://server-sigma-one.vercel.app/api/v1/auth/login" , {username , password});
            setIsLoading(false);
            console.log(data);
 

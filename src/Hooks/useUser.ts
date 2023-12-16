@@ -5,7 +5,7 @@ import {allUsersSelector} from '../Store/Selectors/EditModalSelector'
 export const useUsers = async() => {
      
       const setAllUsers = useSetRecoilState(allUsersSelector)
-      const {data} = await axios.get("http://127.0.0.1:8000/api/v1/user/get-10");
+      const {data} = await axios.get("https://server-sigma-one.vercel.app/api/v1/user/get-10");
     
       if(data.ok) {
         setAllUsers({users : data.users});

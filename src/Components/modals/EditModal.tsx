@@ -23,18 +23,16 @@ const EditModal = () => {
 
   useEffect(() => {
      const fetchData = async() => {
-      setIsLoading(true);
-      const {data} = await axios.get(`http://127.0.0.1:8000/api/v1/user/${Cookies.get("userId")}`);
+      const {data} = await axios.get(`https://server-sigma-one.vercel.app/api/v1/user/${Cookies.get("userId")}/single-user`);
       setName(data.user.name);
       setUserName(data.user.username);
       setBio(data.user.bio);
       setProfileImage(profileImage);
       setCoverImage(coverImage);
-      setIsLoading(false);
     }
     
     fetchData();
-  } ,[Cookies.get("userId")])
+  } ,[])
 
 
   const handleClose = () => {
@@ -45,7 +43,7 @@ const EditModal = () => {
         try {
           setIsLoading(true);
 
-          const {data} = await axios.post(`http://127.0.0.1:8000/api/v1/user/${Cookies.get("userId")}/update-user` , {
+          const {data} = await axios.post(`https://server-sigma-one.vercel.app/api/v1/user/${Cookies.get("userId")}/update-user` , {
             name , username , bio , profileImage , coverImage
           });
           setIsLoading(false);
@@ -53,7 +51,7 @@ const EditModal = () => {
           if(data.ok) {
              setEditModal({isOpen : false});
             //  navigate(`/profile/${Cookies.get("userId")}/${Cookies.get("user")}`);
-            navigate('/')
+            navigate('/');
              toast.success(data.msg);
           }else{
             toast.error(data.msg);

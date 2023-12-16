@@ -7,6 +7,7 @@ import RegisterModal from './Components/modals/RegisterModal'
 import { Toaster } from 'react-hot-toast'
 import Profile from './Pages/Profile'
 import EditModal from './Components/modals/EditModal'
+import Notifications from './Pages/Notifications'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
          <Route path='/' element={<Layout />}> 
            <Route index element={<Home/>} />
            <Route path='profile/:userId/:name' element={<Profile/>} />
+           <Route path='notifications' element={<Notifications/>} />
           </Route>
         
       </Routes>

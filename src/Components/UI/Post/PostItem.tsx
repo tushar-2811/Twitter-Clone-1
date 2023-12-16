@@ -51,7 +51,7 @@ const PostItem:React.FC<postItemProps> = (
            return;
         }
       const checkIsLiked = async() => {
-                const {data} = await axios.get(`http://127.0.0.1:8000/api/v1/user/${(Cookies.get("userId"))}/${postId}/check`);
+                const {data} = await axios.get(`https://server-sigma-one.vercel.app/api/v1/user/${(Cookies.get("userId"))}/${postId}/check`);
                 if(data.isLiked) {
                      setIsLiked(true);
                }else{
@@ -70,12 +70,12 @@ const PostItem:React.FC<postItemProps> = (
           }
 
           if(!isLiked){
-             await axios.post(`http://127.0.0.1:8000/api/v1/user/${(Cookies.get("userId"))}/${postId}/1`);
+             await axios.post(`https://server-sigma-one.vercel.app/api/v1/user/${(Cookies.get("userId"))}/${postId}/1`);
              setTotalLiked((prevState) => prevState + 1);   
           }
 
           else{
-            await axios.post(`http://127.0.0.1:8000/api/v1/user/${(Cookies.get("userId"))}/${postId}/0`);
+            await axios.post(`https://server-sigma-one.vercel.app/api/v1/user/${(Cookies.get("userId"))}/${postId}/0`);
             setTotalLiked((prevState) => prevState - 1);    
           }
 

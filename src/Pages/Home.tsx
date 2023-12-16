@@ -8,7 +8,7 @@ const Home = () => {
     <div >
        <Header  label="Home" />
        <Form/>
-       <PostFeed url={"http://127.0.0.1:8000/api/v1/post/all-posts"} />
+       <PostFeed url={`https://server-sigma-one.vercel.app/api/v1/post/all-posts`} />
     </div>
   )
 }

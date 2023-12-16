@@ -29,7 +29,7 @@ const UserBio:React.FC<BioProps> = ({bio , name , username , userId , following 
     }
 
     const checkFollow = async() => {
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/v1/follow/${(Cookies.get("userId"))}/${(userId)}/check`);
+        const {data} = await axios.get(`https://server-sigma-one.vercel.app/api/v1/follow/${(Cookies.get("userId"))}/${(userId)}/check`);
 
         if(data.isFollowing){
             setIsFollow(true);
@@ -47,12 +47,12 @@ const UserBio:React.FC<BioProps> = ({bio , name , username , userId , following 
       }
 
       if(isFollow === false){
-         const {data} = await axios.get(`http://127.0.0.1:8000/api/v1/follow/${(Cookies.get("userId"))}/${(userId)}/add`);
+         const {data} = await axios.get(`https://server-sigma-one.vercel.app/api/v1/follow/${(Cookies.get("userId"))}/${(userId)}/add`);
          if(data.ok){
            setIsFollow(true);
          }
       }else{
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/v1/follow/${(Cookies.get("userId"))}/${(userId)}/remove`);
+        const {data} = await axios.get(`https://server-sigma-one.vercel.app/api/v1/follow/${(Cookies.get("userId"))}/${(userId)}/remove`);
          if(data.ok){
            setIsFollow(false);
          }
