@@ -9,7 +9,7 @@ import UserPostFeed from "../Components/UI/Post/UserPostFeed"
 
 
 const Profile = () => {
-    const {userId , name} = useParams();
+    const {userId } = useParams();
     const [isLoading , setisLoading] = useState(true);
     const [user , setUser] = useState<any>();
     const [followers , setFollowers] = useState("0");
